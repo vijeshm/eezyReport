@@ -1,0 +1,278 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage{ragged2e}
+\usepackage{scrextend}
+
+\linespread{1.5} % Line spacing
+
+% setting up margins
+\usepackage[top=1.0in, bottom=1.25in, left=1.25in, right=0.5in]{geometry}
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\fontsize{\headerTitleSize}{12pt}\selectfont\projectTitle} % Top left header
+\rhead{\includegraphics[scale=\headerLogoScale]{\collLogoPath}} % Top right header
+\lfoot{\dept} % Bottom left footer
+\cfoot{\durationShort} % Bottom center footer
+\rfoot{Page\ \thepage} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT STRUCTURE COMMANDS
+%	Skip this unless you know what you're doing
+%----------------------------------------------------------------------------------------
+
+% Header and footer for when a page split occurs within a problem environment
+\newcommand{\enterProblemHeader}[1]{
+\nobreak\extramarks{#1}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+}
+
+% Header and footer for when a page split occurs between problem environments
+\newcommand{\exitProblemHeader}[1]{
+\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak
+\nobreak\extramarks{#1}{}\nobreak
+}
+
+\newenvironment{coverpage}{
+\newpage
+\vspace*{\fill}
+  \begin{center}
+      \fontfamily{\coverFontFamily}\selectfont
+      
+      \fontsize{18pt}{10pt}\selectfont
+      \textbf{\univName}
+      
+      \includegraphics[scale=\univLogoScale]{\univLogoPath}
+      
+      \fontsize{12pt}{10pt}\selectfont
+      A Project Report
+      
+      \vspace{\vspaceIntrablock}
+      on
+      
+      \vspace{\vspaceInterblock}
+      \projectTitle
+      
+      \vspace{\vspaceInterblock}
+      submitted in partial fulfillment of the requirements for the award of the degree of
+      
+      \vspace{\vspaceIntrablock}
+      \course
+      
+      \vspace{\vspaceIntrablock}
+      in
+      
+      \vspace{\vspaceIntrablock}
+      \stream
+      
+      \vspace{\vspaceInterblock}
+      by
+      
+      \vspace{\vspaceInterblock}
+      \studentone - \usnone
+      
+      \vspace{\vspaceIntrablock}
+      \studenttwo - \usntwo
+      
+      \vspace{\vspaceIntrablock}
+      \studentthree - \usnthree
+      
+      \vspace{\vspaceInterblock}
+      under the guidance of
+      
+      \vspace{\vspaceIntrablock}
+      \guide
+      
+      \vspace{\vspaceInterblock}
+      \durationLong
+      
+      \vspace{\vspaceIntrablock}
+      \includegraphics[scale=\collCoverLogoScale]{\collLogoPath}
+      
+      \vspace{\vspaceInterblock}
+      \deptName
+      
+      \vspace{\vspaceIntrablock}
+      \collName
+      
+      \vspace{\vspaceIntrablock}
+      \fontsize{9pt}{10pt}\selectfont
+      \affiliation
+      
+      \fontsize{12pt}{10pt}\selectfont
+      \vspace{\vspaceIntrablock}
+      \address
+  \end{center}
+\vspace*{\fill}
+}{×}
+
+\newenvironment{certificate}{
+\vspace*{\fill}
+  \begin{center}
+      \includegraphics[scale=\certificateLogoScale]{\collLogoPath}
+      
+      \vspace{\vspaceInterblock}
+      \fontsize{12pt}{12pt}\selectfont
+      \textbf{\collName}
+      
+      \fontsize{9pt}{12pt}\selectfont
+      \affiliation
+      
+      \fontsize{12pt}{12pt}\selectfont
+      \textbf{\address}
+      
+      \vspace{\vspaceInterblock}
+      \textbf{\deptName}
+      
+      \vspace{\vspaceInterblock}
+      \textbf{\underline{CERTIFICATE}}
+      
+      \vspace{\vspaceInterblock}
+      Certified that the project work entitled \textbf{"\projectTitle"} is bonafide work carried out by
+      
+      \vspace{\vspaceInterblock}
+      \textbf{\studentone, \usnone}
+      
+      \vspace{\vspaceIntrablock}
+      \textbf{\studenttwo, \usntwo}
+      
+      \vspace{\vspaceIntrablock}
+      \textbf{\studentthree, \usnthree}
+      
+      \vspace{\vspaceInterblock}
+      \justifying{
+      in partial fulfillment for the award of degree of Bachelor of Engineering in Computer Science and Engineering of the Visvesvaraya Technological University, Belgaum during the academic semester \durationLong. It is certified that all corrections and suggestions indicated for internal assessment have been incorporated in the report deposited in the departmental library. The project report has been approved as it satisfies the academic requirements in respect of the project work prescribed for the said Bachelor of Engineering degree.}
+
+      \vspace{\vspaceInterblock}
+      \vspace{\vspaceInterblock}
+      \vspace{\vspaceInterblock}
+      \vspace{\vspaceInterblock}
+      \vspace{\vspaceInterblock}
+      \vspace{\vspaceInterblock}
+      \vspace{\vspaceInterblock}
+      
+      \begin{tabular*}{\textwidth}{c @{\extracolsep{\fill}} cc}
+       Signature of the Guide & Signature of the HOD & Signature of the Principal\\
+       \guide & \HOD & \principal
+      \end{tabular*}
+      
+      \vspace{\vspaceInterblock}
+      \begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r}
+      External Viva & \\
+       Name of the examiners & Signature with date\\
+       1. .................................... & ....................................\\
+       2. .................................... & ....................................
+      \end{tabular*}
+  \end{center}
+\vspace*{\fill}
+}{×}
+
+\newenvironment{projectAbstract}{
+\fontfamily{\abstractFontFamily}\selectfont
+\fontsize{\fontLevelTwo}{12pt}\selectfont
+\textbf{\underline{Abstract:}}
+\newline
+\fontsize{\fontLevelFour}{12pt}\selectfont
+}{×}
+
+\newcounter{chapterNumberCounter} % creates a counter to keep track of chapter number
+\newcounter{sectionNumberCounter}
+\newcounter{subsectionNumberCounter}
+
+\newenvironment{projChapter}[1]{
+\chapter{#1}
+\thispagestyle{fancy}
+
+% \newpage
+\stepcounter{chapterNumberCounter}
+\setcounter{sectionNumberCounter}{0}
+% \vspace*{\fill}
+  % \begin{center}    
+    % \fontsize{\fontLevelOne}{12pt}\selectfont
+    % \fontfamily{\chapterFontFamily}\selectfont
+    
+      %\textbf{\underline{Chapter \arabic{chapterNumberCounter}}}
+      %\vspace{10pt}
+      %
+      %\textbf{\underline{#1}}
+  % \end{center}
+% \vspace*{\fill}
+\newpage
+}{}
+
+\newenvironment{projSection}[1]{
+\fontsize{\fontLevelThree}{12pt}\selectfont
+\stepcounter{sectionNumberCounter}
+\setcounter{subsectionNumberCounter}{0}
+\section{\arabic{chapterNumberCounter}.\arabic{sectionNumberCounter} #1}
+\fontsize{\fontLevelFour}{12pt}\selectfont
+\begin{addmargin}[2em]{0em}
+}{
+\end{addmargin}
+~
+}
+
+\newenvironment{projSubSection}[1]{
+\fontsize{\fontLevelThree}{12pt}\selectfont
+\stepcounter{subsectionNumberCounter}
+% \textbf{\arabic{chapterNumberCounter}.\arabic{sectionNumberCounter}.\arabic{subsectionNumberCounter} \underline{#1}}
+\subsection{\arabic{chapterNumberCounter}.\arabic{sectionNumberCounter}.\arabic{subsectionNumberCounter} #1}
+\fontsize{\fontLevelFour}{12pt}\selectfont
+\begin{addmargin}[1em]{0em}
+}{
+\end{addmargin}
+}
+
+\setcounter{secnumdepth}{0} % Removes default section numbers
+\newcounter{homeworkProblemCounter} % Creates a counter to keep track of the number of problems
+
+\newcommand{\homeworkProblemName}{}
+\newenvironment{homeworkProblem}[1][Problem \arabic{homeworkProblemCounter}]{ % Makes a new environment called homeworkProblem which takes 1 argument (custom name) but the default is "Problem #"
+\stepcounter{homeworkProblemCounter} % Increase counter for number of problems
+\renewcommand{\homeworkProblemName}{#1} % Assign \homeworkProblemName the name of the problem
+\section{\homeworkProblemName} % Make a section in the document with the custom problem count
+\enterProblemHeader{\homeworkProblemName} % Header and footer within the environment
+}{
+\exitProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+\newcommand{\problemAnswer}[1]{ % Defines the problem answer command with the content as the only argument
+\noindent\framebox[\columnwidth][c]{\begin{minipage}{0.98\columnwidth}#1\end{minipage}} % Makes the box around the problem answer and puts the content inside
+}
+
+\newcommand{\homeworkSectionName}{}
+\newenvironment{homeworkSection}[1]{ % New environment for sections within homework problems, takes 1 argument - the name of the section
+\renewcommand{\homeworkSectionName}{#1} % Assign \homeworkSectionName to the name of the section from the environment argument
+\subsection{\homeworkSectionName} % Make a subsection with the custom name of the subsection
+\enterProblemHeader{\homeworkProblemName\ [\homeworkSectionName]} % Header and footer within the environment
+}{
+\enterProblemHeader{\homeworkProblemName} % Header and footer after the environment
+}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\title{
+\vspace{2in}
+\textmd{\textbf{\hmwkClass:\ \hmwkTitle}}\\
+\normalsize\vspace{0.1in}\small{Due\ on\ \hmwkDueDate}\\
+\vspace{0.1in}\large{\textit{\hmwkClassInstructor\ \hmwkClassTime}}
+\vspace{3in}
+}
+
+\author{\textbf{\hmwkAuthorName}}
+\date{} % Insert date here if you want it to appear below your name
+
+%----------------------------------------------------------------------------------------
