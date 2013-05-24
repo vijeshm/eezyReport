@@ -6,6 +6,7 @@ from itertools import chain
 def replacements(text):
     text = text.replace('&', '\&')
     text = text.replace('_', '\_')
+    text = text.replace('%', '\%')
     text = text.replace('[', '\lbrack')
     text = text.replace(']', '\\rbrack')
     return text
@@ -16,14 +17,15 @@ def fillContent(tex, srchStr, insStr):
     tex = tex[:insIndex+len(srchStr)] + insStr + tex[insIndex+len(srchStr):]
     return tex
 
-def convertToTex(text):
+def convertToTex(text, figInTabular=False):
     text = replacements(text)
     soup = BeautifulSoup(text)
     contents = soup.contents[0].contents
     retTxt = ''
     for content in contents:
         if str(type(content)) == "<class 'BeautifulSoup.NavigableString'>":
-            content = content.replace('\\newline', '~\\\\\\\\')
+            content = content.replace('\\newline', '~\\\\')
+            content = content.replace('\\newpara', '~\\\\\\\\')
             retTxt += content
         elif str(type(content)) == "<class 'BeautifulSoup.Tag'>":
             if content.name == 'b':
@@ -42,12 +44,42 @@ def convertToTex(text):
                 retTxt += '\\begin{projSection}{' + dict(content.attrs)['name'] + '}' + convertToTex(str(content)) + '\\end{projSection}'
             elif content.name == 'subsection':
                 retTxt += '\\begin{projSubSection}{' + dict(content.attrs)['name'] + '}' + convertToTex(str(content)) + '\\end{projSubSection}'
+            elif content.name == 'img':
+                if figInTabular:
+                    props = dict(content.attrs)
+                    retTxt += '\\raisebox{-\\totalheight}{\centering\n\includegraphics[scale=' + props['scale'] + ']{' + props['src'] + '}\n\label{' + props['id'] + '}}\n'
+                else:
+                    props = dict(content.attrs)
+                    retTxt += '\\begin{figure}[ht!]\n\centering\n\includegraphics[scale=' + props['scale'] + ']{' + props['src'] + '}\n\caption{' + props['caption'] + '}\n\label{' + props['id'] + '}\n\end{figure}\n'
+            elif content.name == 'ref':
+                props = dict(content.attrs)
+                if props['type'] == 'figure':
+                    retTxt += 'Figure \\ref{' + content.text + '}'
+                elif props['type'] == 'table':
+                    retTxt += 'Table \\ref{' + content.text +'}'
+            elif content.name == 'table':
+                props = dict(content.attrs)
+                alignments = props['alignments']
+                retTxt += '\\begin{table}[h]\\begin{center}\\begin{tabular}{' + alignments + '}'
+                for horizontal in content.contents:
+                    if str(type(horizontal)) == "<class 'BeautifulSoup.Tag'>":
+                        if horizontal.name == "tr":
+                            cols = horizontal.contents
+                            numOfCols = len(cols)
+                            for i in range(numOfCols):
+                                if str(type(cols[i])) == "<class 'BeautifulSoup.Tag'>":
+                                    retTxt += convertToTex(str(cols[i]), figInTabular=True)
+                                    print str(cols[i])
+                                    if i != numOfCols - 2:
+                                        retTxt += ' & '
+                                    else:
+                                        retTxt += ' \\\\\n'
+                        elif horizontal.name == 'hline':
+                            retTxt += '\hline\n'
+                retTxt += '\\end{tabular}\\end{center}\\caption{' + props['caption'] + '}\\end{table}'
+
 
     return retTxt
-
-def formatText(unformattedStr):
-    newStr = convertToTex(unformattedStr)
-    return newStr
 
 f = open("assignment_1.tex", "r")
 tex = f.read()
@@ -169,12 +201,12 @@ tex = fillContent(tex, 'newcommand{\\abstractFontFamily}{', abstractFontFamily)
 
 insIndex = tex.index('@acknowledgement')
 insStr = etree.tostring(root.find('acknowledgement'))
-insStr = formatText(insStr)
+insStr = convertToTex(insStr)
 tex = tex[:insIndex] + insStr + tex[insIndex + len('@acknowledgement'):]
 
 insIndex = tex.index('@abstract')
 insStr = etree.tostring(root.find('abstract'))
-insStr = formatText(insStr)
+insStr = convertToTex(insStr)
 tex = tex[:insIndex] + insStr + tex[insIndex + len('@abstract'):]
 
 insIndex = tex.index('@chapters')
@@ -182,7 +214,7 @@ insStr = ''
 chapters = root.findall('chapter')
 for chapter in chapters:
     insStrTemp = etree.tostring(chapter)
-    insStrTemp = formatText('<content>' + insStrTemp + '</content>')
+    insStrTemp = convertToTex('<content>' + insStrTemp + '</content>')
     insStr += insStrTemp + '\n'
 tex = tex[:insIndex] + insStr + tex[insIndex + len('@chapters'):]
 
