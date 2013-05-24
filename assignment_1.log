@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.15)  23 MAY 2013 18:42
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.15)  23 MAY 2013 23:35
 entering extended mode
  %&-line parsing enabled.
-**assignment_1.tex
+**assignment_1.tex test.pdf
 (./assignment_1.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
@@ -216,230 +216,56 @@ driver: pdftex
 
 (1in=72.27pt, 1cm=28.45pt)
 -----------------------
-LaTeX Font Info:    Try loading font information for OT1+times on input line 88
-.
-LaTeX Font Info:    No file OT1times.fd. on input line 88.
+LaTeX Font Info:    Try loading font information for OT1+ on input line 88.
+LaTeX Font Info:    No file OT1.fd. on input line 88.
 
-LaTeX Font Warning: Font shape `OT1/times/m/n' undefined
+LaTeX Font Warning: Font shape `OT1//m/n' undefined
 (Font)              using `OT1/cmr/m/n' instead on input line 88.
 
 
-LaTeX Font Warning: Font shape `OT1/times/m/n' in size <18> not available
+LaTeX Font Warning: Font shape `OT1//m/n' in size <18> not available
 (Font)              size <17.28> substituted on input line 88.
 
 
-LaTeX Font Warning: Font shape `OT1/times/bx/n' undefined
-(Font)              using `OT1/times/m/n' instead on input line 88.
-
-<vtu.png, id=1, 213.79875pt x 301.125pt>
-File: vtu.png Graphic file (type png)
- <use vtu.png>
-<pes.png, id=2, 1373.13pt x 1606.0pt>
-File: pes.png Graphic file (type png)
- <use pes.png>
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ó in font cmr10!
-File: pes.png Graphic file (type png)
- <use pes.png> [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./vtu.png (PNG copy)> <./p
-es.png (PNG copy)>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 91.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 91.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 91.
-
-Overfull \hbox (15.0pt too wide) in paragraph at lines 91--91
-[][] 
- []
+LaTeX Font Warning: Font shape `OT1//bx/n' undefined
+(Font)              using `OT1//m/n' instead on input line 88.
 
 
-Overfull \hbox (15.0pt too wide) in paragraph at lines 91--91
-[][] 
- []
+! LaTeX Error: File `' not found.
 
-Missing character: There is no √ in font cmr10!
-Missing character: There is no ó in font cmr10!
-[2]
-LaTeX Font Info:    Try loading font information for OT1+pbk on input line 94.
- (/usr/share/texmf-texlive/tex/latex/psnfss/ot1pbk.fd
-File: ot1pbk.fd 2001/06/04 font definitions for OT1/pbk.
-)
-LaTeX Font Info:    Font shape `OT1/pbk/m/n' in size <10> not available
-(Font)              Font shape `OT1/pbk/l/n' tried instead on input line 94.
-LaTeX Font Info:    Font shape `OT1/pbk/m/n' in size <16> not available
-(Font)              Font shape `OT1/pbk/l/n' tried instead on input line 94.
-LaTeX Font Info:    Font shape `OT1/pbk/bx/n' in size <16> not available
-(Font)              Font shape `OT1/pbk/b/n' tried instead on input line 94.
-LaTeX Font Info:    Font shape `OT1/pbk/b/n' in size <16> not available
-(Font)              Font shape `OT1/pbk/db/n' tried instead on input line 94.
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 94.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \begin{coverpage}
+                      
+? 
+! Interruption.
+\GenericError  ...                                
+                                                  \endgroup 
+l.88 \begin{coverpage}
+                      
+? 
+! Missing number, treated as zero.
+<to be read again> 
+                   \vskip 
+l.88 \begin{coverpage}
+                      
+? 
+! Emergency stop.
+<to be read again> 
+                   \vskip 
+l.88 \begin{coverpage}
+                      
+End of file on the terminal!
 
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 94.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 94.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 94.
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <16> on input line 94.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11.19995> on input line 94.
-LaTeX Font Info:    Font shape `OT1/pbk/m/n' in size <12> not available
-(Font)              Font shape `OT1/pbk/l/n' tried instead on input line 94.
-Missing character: There is no √ in font pbkl7t!
-Missing character: There is no ó in font pbkl7t!
-[3]
-Missing character: There is no √ in font pbkl7t!
-Missing character: There is no ó in font pbkl7t!
-
-Overfull \hbox (24.2012pt too wide) in paragraph at lines 105--109
-\OT1/pbk/l/n/12 Rec-om-mend-ing items to users is one of the most fre-quently s
-tum-bled upon re-quire-ments
- []
-
-
-Overfull \hbox (18.24495pt too wide) in paragraph at lines 105--109
-\OT1/pbk/l/n/12 for rec-om-mend-ing items. The tech-niques can be broadly clas-
-si-fied into three cat-e-gories:
- []
-
-
-Overfull \hbox (1.63751pt too wide) in paragraph at lines 105--109
-\OT1/pbk/l/n/12 di-men-sion-al-ity re-duc-tion on the dataset. We have de-duced
- some of the char-ac-ter-is-tic
- []
-
-[4] (./assignment_1.toc
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 5.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 5.
-)
-\tf@toc=\write3
-\openout3 = `assignment_1.toc'.
-
- [5
-
-]
-Chapter 1.
-File: pes.png Graphic file (type png)
-<use pes.png>
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 35.7268pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-[6
-
-]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ô in font cmr10!
-
-Overfull \hbox (5.56737pt too wide) in paragraph at lines 138--140
-[]\OT1/cmr/m/n/10 1.4 Com-bin-ing Id-io-cen-tric and Col-lab-o-ra-tive Rec-om-m
-en-da-tion Id-io-cen-tric rec-om-men-da-tion in-volves rec-om-mend-ing
- []
-
-File: pes.png Graphic file (type png)
-<use pes.png> [7]
-Chapter 2.
-File: pes.png Graphic file (type png)
-<use pes.png> [8
-
-]
-File: pes.png Graphic file (type png)
- <use pes.png> [9]
-Chapter 3.
-File: pes.png Graphic file (type png)
-<use pes.png> [10
-
-]
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
-File: pes.png Graphic file (type png)
- <use pes.png> [11]
-Chapter 4.
-File: pes.png Graphic file (type png)
-<use pes.png> [12
-
-]
-Overfull \hbox (34.19846pt too wide) in paragraph at lines 169--170
-[]\OT1/cmr/m/n/12 The pri-mary tar-get users are aca-demic re-searchers and fir
-ms that use some form of rec-om-men-da-tion
- []
-
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-Missing character: There is no ‚ in font cmr12!
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no ì in font cmr12!
-
-Overfull \hbox (10.65102pt too wide) in paragraph at lines 174--178
-\OT1/cmr/m/n/12 em-pha-sizes code read-abil-ity. It is an ex-pres-sive lan-guag
-e which pro-vides lan-guage con-structs
- []
-
-
-Overfull \hbox (0.7877pt too wide) in paragraph at lines 189--190
-[]\OT1/cmr/m/n/12 In soft-ware de-vel-op-ment, Git is a dis-tributed re-vi-sion
- con-trol and source code man-age-ment
- []
-
-File: pes.png Graphic file (type png)
-<use pes.png> [13]
-Overfull \hbox (0.12381pt too wide) in paragraph at lines 193--194
-[]\OT1/cmr/m/n/12 Qt is a cross-platform ap-pli-ca-tion frame-work that is wide
-ly used for de-vel-op-ing ap-pli-ca-tion
- []
-
-File: pes.png Graphic file (type png)
-<use pes.png> [14] AED: lastpage setting LastPage
-File: pes.png Graphic file (type png)
- <use pes.png> [15]
-(./assignment_1.aux)
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 1.28pt have occurred.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 2345 strings out of 493848
- 32920 string characters out of 1152823
- 189265 words of memory out of 3000000
- 5598 multiletter control sequences out of 15000+50000
- 13915 words of font info for 44 fonts, out of 3000000 for 9000
+ 2218 strings out of 493848
+ 31057 string characters out of 1152823
+ 183622 words of memory out of 3000000
+ 5488 multiletter control sequences out of 15000+50000
+ 4237 words of font info for 16 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
- 40i,15n,45p,1059b,528s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
-ve/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/tex
-mf-texlive/fonts/type1/urw/bookman/ubkd8a.pfb></usr/share/texmf-texlive/fonts/t
-ype1/urw/bookman/ubkl8a.pfb>
-Output written on assignment_1.pdf (15 pages, 819660 bytes).
-PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 40i,1n,45p,591b,155s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
