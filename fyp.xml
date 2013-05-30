@@ -481,7 +481,18 @@
         </section>
     </chapter>
 
-    <chapter name="and so on...">
-        so forth...
+    <chapter name="Project Highlights">
+        Some of the major highlights of the project are:
+        <section name="In-homogeneity in Item Properties">
+            An item is associated with a set of properties. Given a set of items, there is no constraint that all the items should possess the same set of properties. Generally, recommendation systems assume homogeneity in properties and are not applicable to inhomogeneous item datasets. 
+            \newpara
+            Most of the data that is available in the real world is inhomogeneous and it takes a lot of effort in cleaning the data. The approach was developed keeping in mind the in-homogeneity of available real world data. The contrast between the earlier approaches and our approach is analogous to the contrast between SQL and NoSQL ideologies. In fact, our approach can be applied to two item entities which are completely different in real world but overlap in certain characteristics.
+        </section>
+
+        <section name="Unsupervised Dimensionality Reduction">
+            In machine learning and statistics, dimensionality reduction is the process of reducing the number of features under consideration, and can be divided into feature selection and feature extraction. Feature selection approaches try to find a subset of the original features. Feature extraction transforms the data in the high-dimensional space. 
+            \newpara
+            Consider an item with 100 properties. The importance of each of the properties is initially unknown. For the data-miner working with this item, it proves to be a hard task to manually select those features which might be of importance. There are less number of techniques which perform unsupervised dimensionality reduction of the dataset. Based on the pattern in which the users have consumed the items, we quantify and normalize the importance of each attribute in the item dataset. This might be of great use to a data-miner in order to gain insights about the data and the usage pattern.
+        </section>
     </chapter>
 </root>

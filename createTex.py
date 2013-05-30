@@ -81,6 +81,10 @@ def convertToTex(text, figInTabular=False):
 
     return retTxt
 
+f = open("assignment_1.sty", "r")
+sty = f.read()
+f.close()
+
 f = open("assignment_1.tex", "r")
 tex = f.read()
 f.close()
@@ -222,4 +226,31 @@ f = open("output.tex", "w")
 f.write(tex)
 f.close()
 
+'''
+modifying the style file
+'''
+#modifying the cover page
+coverIndex = sty.index("@studentsListCover")
+insStrCover = ''
+for i in range(len(students)):
+    if i == 0:
+        insStrCover += '\\vspace{\\vspaceInterblock}\n\\textbf{\\student' + students[i][0] + ' - \usn' + students[i][0] + '}\n\n'
+    else:
+        insStrCover += '\\vspace{\\vspaceIntrablock}\n\\textbf{\\student' + students[i][0] + ' - \usn' + students[i][0] + '}\n\n'
+sty = sty[:coverIndex] + insStrCover + sty[coverIndex + len('@studentsListCover'):]
+
+#modifying the certificate
+certIndex = sty.index("@studentsListCertificate")
+insStrCertificate = ''
+for i in range(len(students)):
+    if i == 0:
+        insStrCertificate += '\\vspace{\\vspaceInterblock}\n\\textbf{\student' + students[i][0] + ', \usn' + students[i][0] + '}\n\n'
+    else:
+        insStrCertificate += '\\vspace{\\vspaceIntrablock}\n\\textbf{\student' + students[i][0] + ', \usn' + students[i][0] + '}\n\n'
+print insStrCertificate
+sty = sty[:certIndex] + insStrCertificate + sty[certIndex + len('@studentsListCertificate'):]
+
+f = open("output.sty", "w")
+f.write(sty)
+f.close()
 os.system("pdflatex output.tex")

@@ -49,4 +49,6 @@
 \contentsline {section}{10.5 Idiocentric Recommendation}{47}
 \contentsline {section}{10.6 Clustering}{48}
 \contentsline {section}{10.7 Collaborative Filtering}{49}
-\contentsline {chapter}{\numberline {11}and so on...}{51}
+\contentsline {chapter}{\numberline {11}Project Highlights}{51}
+\contentsline {section}{11.1 In-homogeneity in Item Properties}{52}
+\contentsline {section}{11.2 Unsupervised Dimensionality Reduction}{52}

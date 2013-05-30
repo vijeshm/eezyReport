@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.15)  25 MAY 2013 00:29
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2013.1.15)  30 MAY 2013 14:24
 entering extended mode
  %&-line parsing enabled.
 **output.tex
@@ -29,7 +29,7 @@ File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (./assignment_1.sty
+) (./output.sty
 (/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
@@ -232,20 +232,13 @@ driver: pdftex
 -----------------------
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OT1+times on input line 89
-.
-LaTeX Font Info:    No file OT1times.fd. on input line 89.
 
-LaTeX Font Warning: Font shape `OT1/times/m/n' undefined
-(Font)              using `OT1/cmr/m/n' instead on input line 89.
-
-
-LaTeX Font Warning: Font shape `OT1/times/m/n' in size <18> not available
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <18> not available
 (Font)              size <17.28> substituted on input line 89.
 
 
-LaTeX Font Warning: Font shape `OT1/times/bx/n' undefined
-(Font)              using `OT1/times/m/n' instead on input line 89.
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 89.
 
 <images/vtu.png, id=1, 213.79875pt x 301.125pt>
 File: images/vtu.png Graphic file (type png)
@@ -788,39 +781,45 @@ Chapter 11.
 File: images/pes.png Graphic file (type png)
 <use images/pes.png> [51
 
-] AED: lastpage setting LastPage
+]
+Underfull \hbox (badness 10000) in paragraph at lines 637--640
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 642--645
+
+ []
+
+AED: lastpage setting LastPage
 File: images/pes.png Graphic file (type png)
- <use images/pes.png>
-[52] (./output.aux)
+ <use images/pes.png> [52] (./output.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.28pt have occurred.
-
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3438 strings out of 493848
- 53013 string characters out of 1152823
- 220100 words of memory out of 3000000
- 6658 multiletter control sequences out of 15000+50000
- 14987 words of font info for 46 fonts, out of 3000000 for 9000
+ 3429 strings out of 493848
+ 52850 string characters out of 1152823
+ 220159 words of memory out of 3000000
+ 6651 multiletter control sequences out of 15000+50000
+ 15602 words of font info for 48 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  40i,15n,45p,1503b,534s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/ty
 pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/
-amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr17.pfb></
+amsfonts/cm/cmbx9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></
 usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/tex
 mf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/
 fonts/type1/urw/bookman/ubkd8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/bo
 okman/ubkl8a.pfb>
-Output written on output.pdf (52 pages, 3303702 bytes).
+Output written on output.pdf (52 pages, 3306849 bytes).
 PDF statistics:
  231 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
