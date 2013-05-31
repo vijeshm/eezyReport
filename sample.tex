@@ -1,0 +1,294 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Structured General Purpose Assignment
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original author:
+% Ted Pavlic (http://www.tedpavlic.com)
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing assignment content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CLASS SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\projectTitle}{your Project Title here}
+\newcommand{\guide}{your Guide name here}
+\newcommand{\principal}{your Principal name here}
+\newcommand{\HOD}{your HoD name here}
+\newcommand{\durationLong}{duration of your project}
+\newcommand{\headerLineWidth}{14pt}
+\newcommand{\footerLineWidth}{14pt}
+\newcommand{\collLogoPath}{images/pes.png}
+
+% font controls
+\newcommand{\defaultFontFamily}{ptm}
+\newcommand{\fontLevelOne}{25pt}
+\newcommand{\fontLevelTwo}{16pt}
+\newcommand{\fontLevelThree}{14pt}
+\newcommand{\fontLevelFour}{12pt}
+
+% students - do NOT modify the below directive
+\newcommand{\studentOne}{student 1's name}
+\newcommand{\usnOne}{student 1's usn}
+\newcommand{\studentTwo}{student 2's name}
+\newcommand{\usnTwo}{student 2's usn}
+\newcommand{\studentThree}{student 3's name}
+\newcommand{\usnThree}{student 3's usn}
+
+
+% header controls
+\newcommand{\headerLogoScale}{0.02}
+\newcommand{\headerTitleSize}{10pt}
+
+%footer controls
+\newcommand{\dept}{short form of your department}
+\newcommand{\durationShort}{short form of the duration of your project}
+
+% chapter controls
+\newcommand{\chapterFontFamily}{pbk}
+
+%coverpage controls
+\newcommand{\coverFontFamily}{times}
+\newcommand{\univName}{your university name here}
+\newcommand{\univLogoPath}{images/vtu.png}
+\newcommand{\univLogoScale}{0.3}
+\newcommand{\course}{your course}
+\newcommand{\stream}{your stream}
+\newcommand{\deptName}{name of your department}
+\newcommand{\collName}{name of your college}
+\newcommand{\affiliation}{affiliation of your college}
+\newcommand{\address}{address of your college}
+\newcommand{\collCoverLogoScale}{0.04}
+\newcommand{\vspaceInterblock}{10pt}
+\newcommand{\vspaceIntrablock}{0pt}
+
+% certificate controls
+\newcommand{\certificateLogoScale}{0.02}
+\newcommand{\certificateCourse}{your course here }
+\newcommand{\certificateStream}{your stream here }
+\newcommand{\certificateUnivName}{your univ here }
+
+
+% project Abstract controls
+\newcommand{\abstractFontFamily}{pbk}
+
+\documentclass{report}
+
+\usepackage{sample}
+\usepackage{lipsum}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\begin{document}
+
+\begin{coverpage}
+\end{coverpage}
+
+\begin{certificate}
+\end{certificate}
+
+\begin{acknowledgement}
+
+        Your acknowledgement text here. Please follow the instructions on how to format the text in the Tutortial chapter.
+    
+\end{acknowledgement}
+
+\begin{projectAbstract}
+
+        Your project abstract here. Please follow the instructions on how to format the text in the Tutorial chapter.
+    
+\end{projectAbstract}
+
+% \maketitle
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+%\setcounter{tocdepth}{1} % Uncomment this line if you don't want subsections listed in the ToC
+
+\newpage
+\tableofcontents
+\newpage
+
+\begin{projChapter}{Tutorial}
+        Now that you can focus only on the content of your report and leave the formatting to eezyReport, I'm sure you'll realize how easy it is to get things done. I must say, formatting without breaking a sweat is a herculean task! Dont believe me? I encourage you to compare the time taken for generating perfectly formatted reports by using conventional methods and eezyReport (and yes, that includes generating the table of contents as well).
+        ~\\ 
+        This chapter trains you with the basic stuff that you need to know about how to get started with using eezyReport. You need to do all the modifications in report.xml file. Go ahead.. read the following content, open up the file and give it a shot.        
+        
+\begin{itemize}
+  \item Creating a new chapter
+                ~\\ You should start a new chapter by adding the \textit{chapter} tag. The \textit{chapter} tag must be a direct child of the root of the \textit{root} tag in report.xml. In fact, the very chapter that you're now reading was added in the same way. I encourage you to look up the report.xml to get a feel of how things are actually done.
+                ~\\
+                ~\\
+                \textless chapter name="lipsum"\textgreater 
+                ~\\
+                sections, subsections, text, images, tables... all interlaced with one another.
+                ~\\
+                \textless \textbackslash chapter\textgreater 
+                ~\\\\
+                Now that you have the chapter setup, you're now ready to add sections, subsections, text, images, tables etc. Oh, and the chapter name is mandatory. Think about it, would it make sense to have to chapter without a name? No, right?
+            
+  \item Adding a new section to a chapter
+                ~\\
+                Ok, now that you have the chapter setup, you can add text and sections. Adding text is way too trivial, just type, thats all. Here is how you add a new section.
+                ~\\\\
+                \textless section name="lorem"\textgreater 
+                ~\\
+                subsections, text, images, tables... all interlaced with one another.
+                ~\\
+                \textless \textbackslash section\textgreater 
+                ~\\\\
+                simple stuff.. right?
+                ~\\
+                Technically, you \textit{can} have a \textit{chapter} tag within a \textit{section} tag, but it would ruin the semantics. Hence, it is highly recommended that you do not use a \textit{chapter} tag with a \textit{section} tag.
+            
+  \item Adding a new subsection to a section
+                ~\\
+                Since you've got the hang of it, lets cut the crap and get to the chase. This is how you create a subsection:
+                ~\\\\
+                \textless subsection name="ipsum"\textgreater 
+                ~\\
+                text, images, tables, lists... all interlaced with one another.
+                ~\\
+                \textless \textbackslash subsection\textgreater 
+                ~\\\\
+                And again, its technically acceptable to have a \textit{section} tag within a \textit{subsection}, but it is semantically incorrect. It is highly recommended that you do not use a \textit{section} tag within a \textit{subsection}.
+            
+\end{itemize}
+
+
+        All this while, you've been happily playing around with creating chapters, sections and subsections. But who is keeping track of numbering the chapters, sections and subsections? Thats right, eezyReport. You dont have to worry about skipping a chapter number, or repeating a section number or a subsection number etc. Rest assured that it'll be handled. But wait, hold on, arent you forgetting something important? Thats right. The Table of Contents. Who is updating the Table of Contents? Well, you might say that the table of contents can be built towards the fag end of the timeline. But here's the problem: What if you want to add a few sections, delete a few subsections and some sections and change the content? The page numbers get distorted and you'll end up pulling your hair in frustration(, yet again). Wouldnt it be much simpler to have the table of contents updated automatically, \textit{every time} you run eezyReport? Well, thats exactly what we're doing. Now, you dont have to worry about syncing page numbers and formatting the table of contents each time you change the document structure.
+        ~\\\\
+        Here are a few pointers on formatting the text and adding content:
+        
+\begin{itemize}
+  \item Bold, Italicize or Underline text
+                ~\\ You would often need to bold, italicize or underline your text. The conventions that I've used are strikingly similar to simple HTML rules (rather, XML rules) that you're all familiar of. Here goes.
+                ~\\ \textless b\textgreater Hello World\textless \textbackslash b\textgreater  produces \textbf{Hello World}
+                ~\\ \textless u\textgreater Hello World\textless \textbackslash u\textgreater  produces \underline{Hello World}
+                ~\\ \textless i\textgreater Hello World\textless \textbackslash i\textgreater  produces \textit{Hello World}
+                ~\\ \textless b\textgreater  \textless i\textgreater Hello World \textless \textbackslash i\textgreater \textless \textbackslash b\textgreater  produces \textbf{\textit{Hello World}}
+                ~\\ \textless u\textgreater  \textless i\textgreater Hello World \textless \textbackslash i\textgreater \textless  \textbackslash u\textgreater  produces \underline{\textit{Hello World}}
+                ~\\ \textless b\textgreater  \textless u\textgreater Hello World \textless \textbackslash u\textgreater \textless \textbackslash b\textgreater  produces \textbf{\underline{Hello World}}
+                ~\\ \textless b\textgreater  \textless u\textgreater  \textless i\textgreater Hello World \textless \textbackslash i\textgreater \textless \textbackslash u\textgreater \textless \textbackslash b\textgreater  produces \textbf{\underline{\textit{Hello World}}}
+
+  \item Special Directives
+                ~\\
+                If you're playing around with the stuff mentioned so far, you wouldve encountered a potentially irksome problem. No matter how much newlines you give in your text, you wouldnt have got the new lines in the generated pdf. The same holds good for a new para and a backslash character. Well, eezyReport has defined some special directives in order get those functionalities. These directives are similar to those in latex.Table \ref{table1} lists the directives.
+                \begin{table}[h]\begin{center}\begin{tabular}{|c|c|}\hline
+\textbf{directive} & \textbf{functionality} \\
+\hline
+\hline
+\textbackslash newline & adds a new line \\
+\hline
+\textbackslash newpara & adds a new para \\
+\hline
+\textbackslash backslash & adds a backslash character \\
+\hline
+\end{tabular}\end{center}\caption{Directives and their functionalities}\label{table1}\end{table}
+
+  \item Adding an Image
+                ~\\
+                Here's the construct for adding an image:
+                ~\\
+                \textless img id="lorem" src="ipsum" caption="duis vel" scale="0.75" /\textgreater 
+
+                Every image will be centered. All images must have an 'id', and it must be unique. 'src' must be defined all the images. 'caption' attribute must be present, but the value can still be an empty string. The scaling factor 'scale' must also be defined for all the images. Note that this is a real number.
+
+                Now, you have a figure. Great! But what if you want to refer the figure. Ofcourse, you can find out the figure number and type it out manually. But what if you add a new figure (or delete one)? Now, you've to reset your  entire set of manually added references right? To take that burden off your chest, eezyReport uses the following convention:
+                ~\\\\
+                \textless ref type="lorem"\textgreater resourceId\textless \textbackslash ref\textgreater 
+                ~\\\\
+                The attribute 'type' can take up two values, 'figure' or 'table'. The id of the resource will be the content of the tag. With such a model in place, you'll have the freedom to add or delete resources without worrying about manually changing the defined references.
+            
+  \item Adding lists
+                ~\\
+                Here's how you can include lists in your report:
+                ~\\\\ \textless ul\textgreater 
+                ~\\    \textless li\textgreater  images, tables, text, lists.. \textless \textbackslash li\textgreater 
+                ~\\    \textless li\textgreater  images, tables, text, lists.. \textless \textbackslash li\textgreater 
+                ~\\ \textless \textbackslash ul\textgreater 
+
+                ~\\\\ Answers to some of the questions that immediately pop up are as follows:
+                ~\\ Can I format the text(bold, italics and underline) within the list? Yes.
+                ~\\ Can I put images within the list? Yes.
+                ~\\ Can I put tables within the list? Yes. You can do the other way round too. But more on that, later.
+                ~\\ Can I have another list within this list? Yes. You can nest lists to any extent.
+                ~\\ What happens to style of nested lists? Will it be properly indented? Yes. The style changes in correspondance with the change in the nesting level. You dont have to worry about hitting 'tab', hitting 'shift+tab', modifying with 'shift+return' and all sorts of crazy stuff and keep wondering why things are the way it is.
+            
+  \item Adding a new table.
+                ~\\ Have you ever tried creating a table in HTML? If you havent, you should. Creating the table in eezyReport is as easy as creating one in HTML. Here's why, the syntax for creation looks a lot similar.
+
+                ~\\ \textless table id="lorem" alignments="\textbar c\textbar c\textbar c\textbar " caption="ipsum"\textgreater 
+                ~\\ \textless hline /\textgreater 
+                ~\\ \hspace{20 mm} \textless tr\textgreater 
+                ~\\ \textless td\textgreater  text, lists, images...\textless \textbackslash td\textgreater 
+                ~\\ ...
+                ~\\ \textless /tr\textgreater 
+                ~\\ \textless hline /\textgreater 
+                ~\\ ...
+                ~\\ \textless /table\textgreater 
+                ~\\\\
+                A table is expected to have a mandatory non-empty 'id', 'caption' and 'alignments' attributes. The 'alignments' attribute is a special and a powerful attribute. It takes up a string value. The vertical lines in the value indicate whether the corresponding line should be drawn in the table. Each character represents a column. The character can either be 'l', 'c' or 'r', indicating left justified, centered or right justified correspondingly. A vertical line separate two columns. You can have many number of lines between columns. The number of lines drawn between columns correspond to the number of lines present in the alignments attribute between the corresponding columns. Table \ref{table2} showcases some of the valid values for alignments attribute:
+                ~\\
+                \begin{table}[h]\begin{center}\begin{tabular}{|c|c|}\hline
+\textbf{Attribute Value} & \textbf{Result} \\
+\hline
+\hline
+ccc & a table with 3 columns, no border, all columns centered \\
+\hline
+lcr & a table with 3 columns, no border, I column: left, II column: centered, III column: right \\
+\hline
+\textbar ccc\textbar  & a table with 3 columns, outer bordered, all columns centered \\
+\hline
+\textbar c\textbar cc\textbar  & a table with 3 columns, outer bordered and col I and II separated by a single line, all columns centered \\
+\hline
+\textbar cc\textbar \textbar c\textbar  & a table with 3 columns, outer bordered and column II and III separated by a double line, all columns centered \\
+\hline
+\textbar c\textbar \textbar \textbar \textbar \textbar cc\textbar  & a table with 3 columns, outer bordered and col I and II separated by 5 lines, all columns centered \\
+\hline
+\end{tabular}\end{center}\caption{values for alignments attribute}\label{table2}\end{table}
+
+                By now, you must've noticed that only vertical lines appear, not the horizontal lines. Well, to get the horizontal lines as well, you've to include a \textit{hline} between the rows. Adding multiple \textit{hline} tags between two rows will introduce more horizontal lines between the two rows.
+                ~\\\\
+                \textless hline /\textgreater 
+                ~\\\\
+                Limitations of the table:
+                
+\begin{itemize}
+  \item \ newline is disabled within the table
+  \item Images cannot have captions within the table
+  \item Nesting the table is possible, but its not developed to full extent.
+\end{itemize}
+
+
+\end{itemize}
+
+\textbf{Why eezyReport?}
+        ~\\ eezyReport is an initiave taken by the students of PES Institute of Technology, Bangalore to ease the task of formatting the reports.
+        ~\\ Here are some advantages that eezyReport has to offer:
+        
+\begin{itemize}
+  \item Convinience in formatting reports.
+  \item Eases the responsibilities of Project Guides in verifying the formatting aspects.
+  \item Simplifies the workflow of the students. Since the students need not worry about formatting, they can concentrate more on the content.
+  \item Building table of contents and handling references to images and tables is a laborious task for students. A slight change in the content would require the students to optionally modify the references and build the table of contents all over again. eezyReport solves the problem by building the table of contents and maintaining references automatically.
+  \item Reduces the manual labor of the Project Coordinator, in verifying various formatting aspects.
+  \item Uniformity in the look and feel of all the reports.
+\end{itemize}
+
+\end{projChapter}
+
+
+
+\end{document}

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <projectDetails>
+        <projectTitle>your Project Title here</projectTitle>
+        <guide>your Guide name here</guide>
+        <principal>your Principal name here</principal>
+        <HOD>your HoD name here</HOD>
+        <duration>duration of your project</duration>
+        <collLogoPath>images/pes.png</collLogoPath>
+    </projectDetails>
+
+    <font>
+        <!-- font controls 
+        default font family is set to Times New Roman by the keywords 'ptm'
+        -->
+        <defaultFontFamily>ptm</defaultFontFamily>
+        <levelOne>25pt</levelOne>
+        <levelTwo>16pt</levelTwo>
+        <levelThree>14pt</levelThree>
+        <levelFour>12pt</levelFour>
+    </font>
+
+    <students>
+        <!-- 
+            You can add the students by having more student tags. Each student tag MUST contain a name tag and a usn tag. Ideally, any number of students can be added, but we have set 3 students to be the default.
+            supports a maximum of 10 students
+        -->
+        <student>
+            <name>student 1's name</name>
+            <usn>student 1's usn</usn>
+        </student>
+        <student>
+            <name>student 2's name</name>
+            <usn>student 2's usn</usn>
+        </student>
+        <student>
+            <name>student 3's name</name>
+            <usn>student 3's usn</usn>
+        </student>
+    </students>
+
+    <header>
+        <!-- header controls 
+        logoScale describes the scaling factor for your college logo and it is set to 1. It means that there is no scaling taking place.
+        default font size of the title and line width is set to 10pt and 14pt respectively.
+        -->
+        <logoScale>0.02</logoScale>
+        <titleSize>10pt</titleSize>
+        <lineWidth>14pt</lineWidth>
+    </header>
+
+    <footer>
+        <!-- footer controls 
+        dept is the short form department that appears on the footer.
+        default font size of the linewidth is set as 14pt.
+        -->
+        <dept>short form of your department</dept>
+        <duration>short form of the duration of your project</duration>
+        <lineWidth>14pt</lineWidth>
+    </footer>
+
+    <chapterControls>
+        <!-- chapter controls 
+        the font family for chapter page is set to Bookman Old Style
+        -->
+        <fontFamily>pbk</fontFamily>
+    </chapterControls>
+
+    <cover>
+        <!-- coverpage controls 
+        These controls are used to generate the cover page
+        default font: Times New Roman
+        scaling factor of the university logo (univLogoScale) is set to 1. i.e, no scaling.
+        scaling factor of the college logo (collCoverLogoScale) is set to 1. i.e, no scaling.
+        vspaceInterblock is the space between blocks. it is set to 10pt by default.
+        vspaceIntrablock is the space between element withing a block. it is set to 0pt by default.
+        -->
+        <fontFamily>times</fontFamily>
+        <univName>your university name here</univName>
+        <univLogoPath>images/vtu.png</univLogoPath>
+        <univLogoScale>0.3</univLogoScale>
+        <course>your course</course>
+        <stream>your stream</stream>
+        <deptName>name of your department</deptName>
+        <collName>name of your college</collName>
+        <affiliation>affiliation of your college</affiliation>
+        <address>address of your college</address>
+        <collCoverLogoScale>0.04</collCoverLogoScale>
+        <vspaceInterblock>10pt</vspaceInterblock>
+        <vspaceIntrablock>0pt</vspaceIntrablock>
+    </cover>
+
+    <certificate>
+        <!-- certificate controls 
+        scaling factor for the college logo used in the certificate. by default, its set to 1. i.e, the logo is not being scaled.
+        -->
+        <logoScale>0.02</logoScale>
+        <course>your course here </course>
+        <stream>your stream here </stream>
+        <univName>your univ here </univName>
+    </certificate>
+
+    <abstractControls>
+        <!-- project Abstract controls 
+        the default font family of the abstract is set to Bookman Old Style
+        -->
+        <fontFamily>pbk</fontFamily>
+    </abstractControls>
+
+    <acknowledgement>
+        Your acknowledgement text here. Please follow the instructions on how to format the text in the Tutortial chapter.
+    </acknowledgement>
+    
+    <abstract>
+        Your project abstract here. Please follow the instructions on how to format the text in the Tutorial chapter.
+    </abstract>
+    
+    <chapter name="Tutorial">
+        Now that you can focus only on the content of your report and leave the formatting to eezyReport, I'm sure you'll realize how easy it is to get things done. I must say, formatting without breaking a sweat is a herculean task! Dont believe me? I encourage you to compare the time taken for generating perfectly formatted reports by using conventional methods and eezyReport (and yes, that includes generating the table of contents as well).
+        \newline 
+        This chapter trains you with the basic stuff that you need to know about how to get started with using eezyReport. You need to do all the modifications in report.xml file. Go ahead.. read the following content, open up the file and give it a shot.        
+        <ul>
+            <li>Creating a new chapter
+                \newline You should start a new chapter by adding the <i>chapter</i> tag. The <i>chapter</i> tag must be a direct child of the root of the <i>root</i> tag in report.xml. In fact, the very chapter that you're now reading was added in the same way. I encourage you to look up the report.xml to get a feel of how things are actually done.
+                \newline
+                \newline
+                &lt;chapter name="lipsum"&gt;
+                \newline
+                sections, subsections, text, images, tables... all interlaced with one another.
+                \newline
+                &lt;\backslash chapter&gt;
+                \newpara
+                Now that you have the chapter setup, you're now ready to add sections, subsections, text, images, tables etc. Oh, and the chapter name is mandatory. Think about it, would it make sense to have to chapter without a name? No, right?
+            </li>
+
+            <li>Adding a new section to a chapter
+                \newline
+                Ok, now that you have the chapter setup, you can add text and sections. Adding text is way too trivial, just type, thats all. Here is how you add a new section.
+                \newpara
+                &lt;section name="lorem"&gt;
+                \newline
+                subsections, text, images, tables... all interlaced with one another.
+                \newline
+                &lt;\backslash section&gt;
+                \newpara
+                simple stuff.. right?
+                \newline
+                Technically, you <i>can</i> have a <i>chapter</i> tag within a <i>section</i> tag, but it would ruin the semantics. Hence, it is highly recommended that you do not use a <i>chapter</i> tag with a <i>section</i> tag.
+            </li>
+
+            <li>Adding a new subsection to a section
+                \newline
+                Since you've got the hang of it, lets cut the crap and get to the chase. This is how you create a subsection:
+                \newpara
+                &lt;subsection name="ipsum"&gt;
+                \newline
+                text, images, tables, lists... all interlaced with one another.
+                \newline
+                &lt;\backslash subsection&gt;
+                \newpara
+                And again, its technically acceptable to have a <i>section</i> tag within a <i>subsection</i>, but it is semantically incorrect. It is highly recommended that you do not use a <i>section</i> tag within a <i>subsection</i>.
+            </li>
+        </ul>
+
+        All this while, you've been happily playing around with creating chapters, sections and subsections. But who is keeping track of numbering the chapters, sections and subsections? Thats right, eezyReport. You dont have to worry about skipping a chapter number, or repeating a section number or a subsection number etc. Rest assured that it'll be handled. But wait, hold on, arent you forgetting something important? Thats right. The Table of Contents. Who is updating the Table of Contents? Well, you might say that the table of contents can be built towards the fag end of the timeline. But here's the problem: What if you want to add a few sections, delete a few subsections and some sections and change the content? The page numbers get distorted and you'll end up pulling your hair in frustration(, yet again). Wouldnt it be much simpler to have the table of contents updated automatically, <i>every time</i> you run eezyReport? Well, thats exactly what we're doing. Now, you dont have to worry about syncing page numbers and formatting the table of contents each time you change the document structure.
+        \newpara
+        Here are a few pointers on formatting the text and adding content:
+        <ul>
+            <li>Bold, Italicize or Underline text
+                \newline You would often need to bold, italicize or underline your text. The conventions that I've used are strikingly similar to simple HTML rules (rather, XML rules) that you're all familiar of. Here goes.
+                \newline &lt;b&gt;Hello World&lt;\backslash b&gt; produces <b>Hello World</b>
+                \newline &lt;u&gt;Hello World&lt;\backslash u&gt; produces <u>Hello World</u>
+                \newline &lt;i&gt;Hello World&lt;\backslash i&gt; produces <i>Hello World</i>
+                \newline &lt;b&gt; &lt;i&gt;Hello World &lt;\backslash i&gt;&lt;\backslash b&gt; produces <b><i>Hello World</i></b>
+                \newline &lt;u&gt; &lt;i&gt;Hello World &lt;\backslash i&gt;&lt; \backslash u&gt; produces <u><i>Hello World</i></u>
+                \newline &lt;b&gt; &lt;u&gt;Hello World &lt;\backslash u&gt;&lt;\backslash b&gt; produces <b><u>Hello World</u></b>
+                \newline &lt;b&gt; &lt;u&gt; &lt;i&gt;Hello World &lt;\backslash i&gt;&lt;\backslash u&gt;&lt;\backslash b&gt; produces <b><u><i>Hello World</i></u></b>
+            </li>
+
+            <li>Special Directives
+                \newline
+                If you're playing around with the stuff mentioned so far, you wouldve encountered a potentially irksome problem. No matter how much newlines you give in your text, you wouldnt have got the new lines in the generated pdf. The same holds good for a new para and a backslash character. Well, eezyReport has defined some special directives in order get those functionalities. These directives are similar to those in latex.<ref type="table">table1</ref> lists the directives.
+                <table id="table1" alignments="|c|c|" caption="Directives and their functionalities">
+                    <hline />
+                    <tr>
+                        <td><b>directive</b></td>
+                        <td><b>functionality</b></td>
+                    </tr>
+                    <hline />
+                    <hline />
+                    <tr>
+                        <td>\backslash newline</td>
+                        <td>adds a new line</td>
+                    </tr>
+                    <hline />
+                    <tr>
+                        <td>\backslash newpara</td>
+                        <td>adds a new para</td>
+                    </tr>
+                    <hline />
+                    <tr>
+                        <td>\backslash backslash</td>
+                        <td>adds a backslash character</td>
+                    </tr>
+                    <hline />
+                </table>
+            </li>
+
+            <li>Adding an Image
+                \newline
+                Here's the construct for adding an image:
+                \newline
+                &lt;img id="lorem" src="ipsum" caption="duis vel" scale="0.75" /&gt;
+
+                Every image will be centered. All images must have an 'id', and it must be unique. 'src' must be defined all the images. 'caption' attribute must be present, but the value can still be an empty string. The scaling factor 'scale' must also be defined for all the images. Note that this is a real number.
+
+                Now, you have a figure. Great! But what if you want to refer the figure. Ofcourse, you can find out the figure number and type it out manually. But what if you add a new figure (or delete one)? Now, you've to reset your  entire set of manually added references right? To take that burden off your chest, eezyReport uses the following convention:
+                \newpara
+                &lt;ref type="lorem"&gt;resourceId&lt;\backslash ref&gt;
+                \newpara
+                The attribute 'type' can take up two values, 'figure' or 'table'. The id of the resource will be the content of the tag. With such a model in place, you'll have the freedom to add or delete resources without worrying about manually changing the defined references.
+            </li>
+            <li>Adding lists
+                \newline
+                Here's how you can include lists in your report:
+                \newpara &lt;ul&gt;
+                \newline    &lt;li&gt; images, tables, text, lists.. &lt;\backslash li&gt;
+                \newline    &lt;li&gt; images, tables, text, lists.. &lt;\backslash li&gt;
+                \newline &lt;\backslash ul&gt;
+
+                \newpara Answers to some of the questions that immediately pop up are as follows:
+                \newline Can I format the text(bold, italics and underline) within the list? Yes.
+                \newline Can I put images within the list? Yes.
+                \newline Can I put tables within the list? Yes. You can do the other way round too. But more on that, later.
+                \newline Can I have another list within this list? Yes. You can nest lists to any extent.
+                \newline What happens to style of nested lists? Will it be properly indented? Yes. The style changes in correspondance with the change in the nesting level. You dont have to worry about hitting 'tab', hitting 'shift+tab', modifying with 'shift+return' and all sorts of crazy stuff and keep wondering why things are the way it is.
+            </li>
+            <li>Adding a new table.
+                \newline Have you ever tried creating a table in HTML? If you havent, you should. Creating the table in eezyReport is as easy as creating one in HTML. Here's why, the syntax for creation looks a lot similar.
+
+                \newline &lt;table id="lorem" alignments="|c|c|c|" caption="ipsum"&gt;
+                \newline &lt;hline /&gt;
+                \newline \hspace{20 mm} &lt;tr&gt;
+                \newline &lt;td&gt; text, lists, images...&lt;\backslash td&gt;
+                \newline ...
+                \newline &lt;/tr&gt;
+                \newline &lt;hline /&gt;
+                \newline ...
+                \newline &lt;/table&gt;
+                \newpara
+                A table is expected to have a mandatory non-empty 'id', 'caption' and 'alignments' attributes. The 'alignments' attribute is a special and a powerful attribute. It takes up a string value. The vertical lines in the value indicate whether the corresponding line should be drawn in the table. Each character represents a column. The character can either be 'l', 'c' or 'r', indicating left justified, centered or right justified correspondingly. A vertical line separate two columns. You can have many number of lines between columns. The number of lines drawn between columns correspond to the number of lines present in the alignments attribute between the corresponding columns. <ref type='table'>table2</ref> showcases some of the valid values for alignments attribute:
+                \newline
+                <table id="table2" alignments="|c|c|" caption="values for alignments attribute">
+                    <hline />
+                    <tr>
+                        <td><b>Attribute Value</b></td>
+                        <td><b>Result</b></td>
+                    </tr>
+                    <hline />
+                    <hline />
+                    <tr>
+                        <td>ccc</td>
+                        <td>a table with 3 columns, no border, all columns centered</td>
+                    </tr>
+                    <hline />
+                    <tr>
+                        <td>lcr</td>
+                        <td>a table with 3 columns, no border, I column: left, II column: centered, III column: right</td>
+                    </tr>
+                    <hline />
+                    <tr>
+                        <td>|ccc|</td>
+                        <td>a table with 3 columns, outer bordered, all columns centered</td>
+                    </tr>
+                    <hline />
+                    <tr>
+                        <td>|c|cc|</td>
+                        <td>a table with 3 columns, outer bordered and col I and II separated by a single line, all columns centered</td>
+                    </tr>
+                    <hline />
+                    <tr>
+                        <td>|cc||c|</td>
+                        <td>a table with 3 columns, outer bordered and column II and III separated by a double line, all columns centered</td>
+                    </tr>
+                    <hline />
+                    <tr>
+                        <td>|c|||||cc|</td>
+                        <td>a table with 3 columns, outer bordered and col I and II separated by 5 lines, all columns centered</td>
+                    </tr>
+                    <hline />
+                </table>
+
+                By now, you must've noticed that only vertical lines appear, not the horizontal lines. Well, to get the horizontal lines as well, you've to include a <i>hline</i> between the rows. Adding multiple <i>hline</i> tags between two rows will introduce more horizontal lines between the two rows.
+                \newpara
+                &lt;hline /&gt;
+                \newpara
+                Limitations of the table:
+                <ul>
+                    <li>\ newline is disabled within the table</li>
+                    <li>Images cannot have captions within the table</li>
+                    <li>Nesting the table is possible, but its not developed to full extent.</li>
+                </ul>
+            </li>
+        </ul>
+        <b>Why eezyReport?</b>
+        \newline eezyReport is an initiave taken by the students of PES Institute of Technology, Bangalore to ease the task of formatting the reports.
+        \newline Here are some advantages that eezyReport has to offer:
+        <ul>
+            <li>Convinience in formatting reports.</li>
+            <li>Eases the responsibilities of Project Guides in verifying the formatting aspects.</li>
+            <li>Simplifies the workflow of the students. Since the students need not worry about formatting, they can concentrate more on the content.</li>
+            <li>Building table of contents and handling references to images and tables is a laborious task for students. A slight change in the content would require the students to optionally modify the references and build the table of contents all over again. eezyReport solves the problem by building the table of contents and maintaining references automatically.</li>
+            <li>Reduces the manual labor of the Project Coordinator, in verifying various formatting aspects.</li>
+            <li>Uniformity in the look and feel of all the reports.</li>
+        </ul>
+
+    </chapter>
+</root>

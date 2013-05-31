@@ -66,13 +66,17 @@
 
 % certificate controls
 \newcommand{\certificateLogoScale}{}
+\newcommand{\certificateCourse}{}
+\newcommand{\certificateStream}{}
+\newcommand{\certificateUnivName}{}
+
 
 % project Abstract controls
 \newcommand{\abstractFontFamily}{}
 
 \documentclass{report}
 
-\usepackage{output}
+\usepackage{sample}
 \usepackage{lipsum}
 \usepackage{ragged2e}
 \usepackage{graphicx}
